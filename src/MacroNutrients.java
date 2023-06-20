@@ -25,7 +25,7 @@ public class MacroNutrients {
                 System.out.println(tracker);
                 System.out.println("What is your gender?");
                 String gender = info.nextLine();
-                if (gender == "male" || gender == "female") {
+                if (gender.equals("male") || gender.equals("female")) {
                     System.out.println(gender);
                     tracker += 1;
 
