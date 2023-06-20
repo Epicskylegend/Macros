@@ -14,6 +14,7 @@ public class MacroNutrients {
                 if (age > 0) {
 //                    System.out.println(age);
                     tracker += 1;
+                    counter += 1;
                     System.out.println("What is your gender?");
                 }
 
@@ -28,15 +29,45 @@ public class MacroNutrients {
                 if (gender.equals("male") || gender.equals("female")) {
                     System.out.println(gender);
                     tracker += 1;
+                    System.out.println("List your height in cm.");
                 }
 
                 else if (gender.equals("male") || gender.equals("female")) {
-                    counter += 1;
-                    if (counter >= 1) {
-                        System.out.println("Please enter in a valid gender.");
+                    System.out.println("Please enter in a valid gender.");
                     }
 
+                if (counter > 1) {
+                    System.out.println("Please enter in a valid gender.");
+
                 }
+            }
+
+            if (tracker == 3) {
+                int height = info.nextInt();
+                if (height > 0) {
+                    System.out.println(height);
+                    tracker += 1;
+                    System.out.println("What is your weight in lbs?");
+                }
+
+;            }
+
+            if (tracker == 4) {
+                int weight = info.nextInt();
+                if (weight >= 0) {
+                    System.out.println(weight);
+                    tracker += 1;
+                    System.out.println("How many days a week do you exercise?");
+                }
+
+            }
+            if (tracker == 5) {
+                int exerciseDays = info.nextInt();
+                if (exerciseDays > 0) {
+                    System.out.println(exerciseDays);
+                    tracker += 1;
+                }
+
             }
 
 
