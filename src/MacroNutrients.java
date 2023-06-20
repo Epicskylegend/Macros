@@ -6,11 +6,14 @@ public class MacroNutrients {
         int tracker = 1;
         int counter = 0;
 
-        String gender;
+        String gender = null;
         int age = 0;
-        int weight;
-        int height;
-        int exerciseDays;
+        int weight = 0;
+        int height = 0;
+        int exerciseDays = 0;
+
+        int calories = 0;
+
 
 
         while (tracker <= 3) {
@@ -76,6 +79,11 @@ public class MacroNutrients {
             }
             if (tracker == 6) {
                 System.out.println("Age: " + age);
+                System.out.println("Gender: " + gender);
+                System.out.println("Height: " + height + " cm.");
+                System.out.println("Weight: " + weight + " lbs.");
+                System.out.println("Days a week you exercise: " + exerciseDays);
+                System.out.println("Recommended daily calories: " + calories);
     
             }
 
