@@ -1,5 +1,6 @@
 public class UserInfo {
     String gender = null;
+    String fitnessGoal = null;
     int age = 0;
     int weight = 0;
     int height = 0;
@@ -7,6 +8,7 @@ public class UserInfo {
 
     int calories = 0;
     public void macroInfo () {
+        System.out.println("User Information");
         System.out.println("Age: " + age);
         System.out.println("Gender: " + gender);
         System.out.println("Height: " + height + " cm");
@@ -38,6 +40,9 @@ public class UserInfo {
     }
     public void exerciseInfo () {
         System.out.println("How many days a week do you exercise?");
+    }
+    public void weightGoal () {
+        System.out.println("Is your goal to gain, lose, or maintain your current weight?");
     }
 
 }

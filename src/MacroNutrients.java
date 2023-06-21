@@ -9,7 +9,8 @@ public class MacroNutrients  {
 
 
 
-        while (tracker <= 3) {
+        while (tracker <= 6) {
+
             if (tracker == 1) {
                 user.ageInfo();
                  user.age = info.nextInt();
@@ -57,7 +58,7 @@ public class MacroNutrients  {
                 if (user.weight >= 0) {
                     System.out.println(user.weight);
                     tracker += 1;
-                   user.exerciseInfo();
+                    user.exerciseInfo();
                 }
 
             }
@@ -66,10 +67,20 @@ public class MacroNutrients  {
                 if (user.exerciseDays > 0) {
                     System.out.println(user.exerciseDays);
                     tracker += 1;
+                    user.weightGoal();
                 }
 
             }
+
             if (tracker == 6) {
+                user.fitnessGoal = info.nextLine();
+                if (user.fitnessGoal.equals("lose") || user.fitnessGoal.equals("maintain") || user.fitnessGoal.equals("gain")) {
+                    System.out.println(user.fitnessGoal);
+                    tracker += 1;
+                }
+            }
+
+            if (tracker == 7) {
                 user.macroInfo();
             }
 
