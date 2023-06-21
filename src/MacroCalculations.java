@@ -1,4 +1,6 @@
 public class MacroCalculations {
-    UserInfo user = new UserInfo();
+    public static void main(String[] args) {
+        UserInfo user = new UserInfo();
 
+    }
 }

@@ -1,5 +1,5 @@
 public class UserInfo {
-    String gender = null;
+    String gender = "m";
     String fitnessGoal = null;
     String diet = null;
     int age = 0;
@@ -55,5 +55,6 @@ public class UserInfo {
     public void dietInfo () {
         System.out.println("Are you pursuing a balanced, high protein, low fat or low carb diet?");
     }
+
 
 }

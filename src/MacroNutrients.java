@@ -29,10 +29,17 @@ public class MacroNutrients  {
 
             if (tracker == 2) {
                 user.gender = info.nextLine();
-                if (user.gender.equals("male") || user.gender.equals("female")) {
+                if (user.gender.equals("male") || user.gender.equals("Male")) {
+                    System.out.println(user.gender);
+                    user.calories += 400;
+                    tracker += 1;
+                    user.heightInfo();
+                }
+                else if (user.gender.equals("female") || user.gender.equals("Female")) {
                     System.out.println(user.gender);
                     tracker += 1;
                     user.heightInfo();
+
                 }
 
                 else if (user.gender.equals("male") || user.gender.equals("female")) {
@@ -93,8 +100,6 @@ public class MacroNutrients  {
             if (tracker == 8) {
                 user.macroInfo();
             }
-
-
         }
 
     }
