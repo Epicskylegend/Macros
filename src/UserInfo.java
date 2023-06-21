@@ -1,6 +1,7 @@
 public class UserInfo {
     String gender = null;
     String fitnessGoal = null;
+    String diet = null;
     int age = 0;
     int weight = 0;
     int height = 0;
@@ -14,8 +15,9 @@ public class UserInfo {
         System.out.println("Height: " + height + " cm");
         System.out.println("Weight: " + weight + " lbs");
         System.out.println("Days a week you exercise: " + exerciseDays);
-        System.out.println("Weight Goal: ");
+        System.out.println("Weight Goal: " + fitnessGoal + " weight");
         System.out.println("Recommended daily calories: " + calories);
+        System.out.println("Diet Type: " + diet);
 
     }
 
@@ -43,6 +45,9 @@ public class UserInfo {
     }
     public void weightGoal () {
         System.out.println("Is your goal to gain, lose, or maintain your current weight?");
+    }
+    public void dietInfo () {
+        System.out.println("Are you pursuing a balanced, high protein, low fat or low carb diet?");
     }
 
 }

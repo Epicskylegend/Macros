@@ -9,7 +9,7 @@ public class MacroNutrients  {
 
 
 
-        while (tracker <= 6) {
+        while (tracker <= 7) {
 
             if (tracker == 1) {
                 user.ageInfo();
@@ -77,10 +77,19 @@ public class MacroNutrients  {
                 if (user.fitnessGoal.equals("lose") || user.fitnessGoal.equals("maintain") || user.fitnessGoal.equals("gain")) {
                     System.out.println(user.fitnessGoal);
                     tracker += 1;
+                    user.dietInfo();
+                }
+            }
+            if(tracker == 7) {
+                user.diet = info.nextLine();
+                if (user.diet.equals("balanced") || user.diet.equals("high protein") || user.diet.equals("low fat") || user.diet.equals("low carb")) {
+                    System.out.println(user.diet);
+                    tracker += 1;
+
                 }
             }
 
-            if (tracker == 7) {
+            if (tracker == 8) {
                 user.macroInfo();
             }
 
