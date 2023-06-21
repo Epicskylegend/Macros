@@ -9,21 +9,18 @@ public class MacroNutrients  {
 
 
 
-        int calories = 0;
-
-
         while (tracker <= 3) {
             if (tracker == 1) {
-                System.out.println("How old are you?");
+                user.ageInfo();
                  user.age = info.nextInt();
                 if (user.age > 0) {
                     tracker += 1;
                     counter += 1;
-                    System.out.println("What is your gender?");
+                    user.genderInfo();
                 }
 
                 else if (user.age <= 0) {
-                    System.out.println("Please enter in a valid age");
+                   user.invalidAge();
                 }
             }
 
@@ -33,16 +30,15 @@ public class MacroNutrients  {
                 if (user.gender.equals("male") || user.gender.equals("female")) {
                     System.out.println(user.gender);
                     tracker += 1;
-                    System.out.println("List your height in cm.");
+                    user.heightInfo();
                 }
 
                 else if (user.gender.equals("male") || user.gender.equals("female")) {
-                    System.out.println("Please enter in a valid gender.");
+                    user.invalidGender();
                     }
 
                 if (counter > 1) {
-                    System.out.println("Please enter in a valid gender.");
-
+                    user.invalidGender();
                 }
             }
 
@@ -51,7 +47,7 @@ public class MacroNutrients  {
                 if (user.height > 0) {
                     System.out.println(user.height);
                     tracker += 1;
-                    System.out.println("What is your weight in lbs?");
+                    user.weightInfo();
                 }
 
             }
@@ -61,7 +57,7 @@ public class MacroNutrients  {
                 if (user.weight >= 0) {
                     System.out.println(user.weight);
                     tracker += 1;
-                    System.out.println("How many days a week do you exercise?");
+                   user.exerciseInfo();
                 }
 
             }
@@ -75,8 +71,6 @@ public class MacroNutrients  {
             }
             if (tracker == 6) {
                 user.macroInfo();
-
-    
             }
 
 
