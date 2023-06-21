@@ -1,46 +1,42 @@
 import java.util.Scanner;
 
-public class MacroNutrients {
+public class MacroNutrients  {
     public static void main(String[] args) {
+        UserInfo user = new UserInfo();
         Scanner info = new Scanner(System.in);
         int tracker = 1;
         int counter = 0;
 
-        String gender = null;
-        int age = 0;
-        int weight = 0;
-        int height = 0;
-        int exerciseDays = 0;
+
 
         int calories = 0;
-
 
 
         while (tracker <= 3) {
             if (tracker == 1) {
                 System.out.println("How old are you?");
-                 age = info.nextInt();
-                if (age > 0) {
+                 user.age = info.nextInt();
+                if (user.age > 0) {
                     tracker += 1;
                     counter += 1;
                     System.out.println("What is your gender?");
                 }
 
-                else if (age <= 0) {
+                else if (user.age <= 0) {
                     System.out.println("Please enter in a valid age");
                 }
             }
 
 
             if (tracker == 2) {
-                gender = info.nextLine();
-                if (gender.equals("male") || gender.equals("female")) {
-                    System.out.println(gender);
+                user.gender = info.nextLine();
+                if (user.gender.equals("male") || user.gender.equals("female")) {
+                    System.out.println(user.gender);
                     tracker += 1;
                     System.out.println("List your height in cm.");
                 }
 
-                else if (gender.equals("male") || gender.equals("female")) {
+                else if (user.gender.equals("male") || user.gender.equals("female")) {
                     System.out.println("Please enter in a valid gender.");
                     }
 
@@ -51,9 +47,9 @@ public class MacroNutrients {
             }
 
             if (tracker == 3) {
-                height = info.nextInt();
-                if (height > 0) {
-                    System.out.println(height);
+                user.height = info.nextInt();
+                if (user.height > 0) {
+                    System.out.println(user.height);
                     tracker += 1;
                     System.out.println("What is your weight in lbs?");
                 }
@@ -61,29 +57,25 @@ public class MacroNutrients {
             }
 
             if (tracker == 4) {
-                weight = info.nextInt();
-                if (weight >= 0) {
-                    System.out.println(weight);
+                user.weight = info.nextInt();
+                if (user.weight >= 0) {
+                    System.out.println(user.weight);
                     tracker += 1;
                     System.out.println("How many days a week do you exercise?");
                 }
 
             }
             if (tracker == 5) {
-                exerciseDays = info.nextInt();
-                if (exerciseDays > 0) {
-                    System.out.println(exerciseDays);
+                user.exerciseDays = info.nextInt();
+                if (user.exerciseDays > 0) {
+                    System.out.println(user.exerciseDays);
                     tracker += 1;
                 }
 
             }
             if (tracker == 6) {
-                System.out.println("Age: " + age);
-                System.out.println("Gender: " + gender);
-                System.out.println("Height: " + height + " cm.");
-                System.out.println("Weight: " + weight + " lbs.");
-                System.out.println("Days a week you exercise: " + exerciseDays);
-                System.out.println("Recommended daily calories: " + calories);
+                user.macroInfo();
+
     
             }
 
