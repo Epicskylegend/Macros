@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class MacroNutrients  {
     public static void main(String[] args) {
         UserInfo user = new UserInfo();
+        MacroCalculations macros = new MacroCalculations();
         Scanner info = new Scanner(System.in);
         int tracker = 1;
         int counter = 0;

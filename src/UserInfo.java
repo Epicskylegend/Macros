@@ -7,7 +7,12 @@ public class UserInfo {
     int height = 0;
     int exerciseDays = 0;
 
-    int calories = 0;
+    int calories = 2000;
+    int protein = 0;
+    int carbs = 0;
+    int fat = 0;
+    int sugar = 0;
+
     public void macroInfo () {
         System.out.println("User Information");
         System.out.println("Age: " + age);
@@ -16,8 +21,9 @@ public class UserInfo {
         System.out.println("Weight: " + weight + " lbs");
         System.out.println("Days a week you exercise: " + exerciseDays);
         System.out.println("Weight Goal: " + fitnessGoal + " weight");
-        System.out.println("Recommended daily calories: " + calories);
         System.out.println("Diet Type: " + diet);
+        System.out.println("Recommended daily calories: " + calories);
+
 
     }
 
