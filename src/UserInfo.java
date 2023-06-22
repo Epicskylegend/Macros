@@ -2,12 +2,12 @@ public class UserInfo {
     String gender = "m";
     String fitnessGoal = null;
     String diet = null;
-    int age = 0;
-    int weight = 0;
-    int height = 0;
+    int age = 1;
+    int weight = 1;
+    int height = 1;
     int exerciseDays = 0;
 
-    int calories = 2000;
+
     int protein = 0;
     int carbs = 0;
     int fat = 0;
@@ -22,7 +22,7 @@ public class UserInfo {
         System.out.println("Days a week you exercise: " + exerciseDays);
         System.out.println("Weight Goal: " + fitnessGoal + " weight");
         System.out.println("Diet Type: " + diet);
-        System.out.println("Recommended daily calories: " + calories);
+
 
 
     }

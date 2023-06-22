@@ -11,6 +11,8 @@ public class MacroNutrients  {
 
 
         while (tracker <= 7) {
+            double maleCalories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age) + 5;
+            double femaleCalories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age)- 161;
 
             if (tracker == 1) {
                 user.ageInfo();
@@ -31,7 +33,6 @@ public class MacroNutrients  {
                 user.gender = info.nextLine();
                 if (user.gender.equals("male") || user.gender.equals("Male")) {
                     System.out.println(user.gender);
-                    user.calories += 400;
                     tracker += 1;
                     user.heightInfo();
                 }
@@ -97,8 +98,13 @@ public class MacroNutrients  {
                 }
             }
 
-            if (tracker == 8) {
+            if (tracker == 8 && user.gender.equals("male")) {
                 user.macroInfo();
+                System.out.println("Recommended daily calories: " + maleCalories);
+            }
+            else if (tracker == 8 && user.gender.equals("female")){
+                user.macroInfo();
+                System.out.println("Recommended daily calories: " + femaleCalories);
             }
         }
 
