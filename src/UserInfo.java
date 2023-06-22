@@ -22,9 +22,6 @@ public class UserInfo {
         System.out.println("Days a week you exercise: " + exerciseDays);
         System.out.println("Weight Goal: " + fitnessGoal + " weight");
         System.out.println("Diet Type: " + diet);
-
-
-
     }
 
     public void ageInfo () {

@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class MacroNutrients  {
+
+
     public static void main(String[] args) {
         UserInfo user = new UserInfo();
         MacroCalculations macros = new MacroCalculations();
@@ -9,9 +11,8 @@ public class MacroNutrients  {
         int counter = 0;
 
 
-
         while (tracker <= 7) {
-            double maleCalories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age) + 5;
+            double calories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age) + 5;
             double femaleCalories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age)- 161;
 
             if (tracker == 1) {
@@ -73,7 +74,7 @@ public class MacroNutrients  {
             }
             if (tracker == 5) {
                 user.exerciseDays = info.nextInt();
-                if (user.exerciseDays > 0) {
+                if (user.exerciseDays >= 0) {
                     System.out.println(user.exerciseDays);
                     tracker += 1;
                     user.weightGoal();
@@ -98,14 +99,27 @@ public class MacroNutrients  {
                 }
             }
 
-            if (tracker == 8 && user.gender.equals("male")) {
+            if (tracker == 8) {
+                if (user.exerciseDays == 0) {
+                    calories *= 1.2;
+                }
+                if (user.exerciseDays > 0 && user.exerciseDays < 3) {
+                    calories *= 1.375;
+                }
+                if (user.exerciseDays >= 3 && user.exerciseDays < 6) {
+                    calories *= 1.55;
+                }
+                if (user.exerciseDays >= 6) {
+                    calories *= 1.725;
+                }
+                if (user.gender.equals("female")) {
+                    calories *= 0.9;
+                }
                 user.macroInfo();
-                System.out.println("Recommended daily calories: " + maleCalories);
+                System.out.println("Recommended Daily Calories: " + calories);
+
             }
-            else if (tracker == 8 && user.gender.equals("female")){
-                user.macroInfo();
-                System.out.println("Recommended daily calories: " + femaleCalories);
-            }
+
         }
 
     }
