@@ -63,7 +63,7 @@ public class MacroNutrients  {
 
             if (tracker == 4) {
                 user.weight = info.nextInt();
-                if (user.weight >= 0) {
+                if (user.weight > 0) {
                     System.out.println(user.weight);
                     tracker += 1;
                     user.exerciseInfo();
