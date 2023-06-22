@@ -102,27 +102,38 @@ public class MacroNutrients  {
             if (tracker == 8) {
                 if (user.exerciseDays == 0) {
                     calories *= 1.2;
+                    femaleCalories *= 1.2;
                 }
                 if (user.exerciseDays > 0 && user.exerciseDays < 3) {
                     calories *= 1.375;
+                    femaleCalories *= 1.375;
                 }
                 if (user.exerciseDays >= 3 && user.exerciseDays < 6) {
                     calories *= 1.55;
+                    femaleCalories *= 1.55;
                 }
                 if (user.exerciseDays >= 6) {
                     calories *= 1.725;
-                }
-                if (user.gender.equals("female")) {
-                    calories *= 0.8;
+                    femaleCalories *= 1.725;
                 }
                 if (user.fitnessGoal.equals("lose")) {
                     calories *= 0.8;
+                    femaleCalories *= 0.8;
                 }
                 if (user.fitnessGoal.equals("gain")) {
                     calories *= 1.2;
+                    femaleCalories *= 1.2;
                 }
-                user.macroInfo();
-                System.out.println("Recommended Daily Calories: " + Math.rint(calories));
+                if (user.gender.equals("male")) {
+                    user.macroInfo();
+                    System.out.println("Recommended Daily Calories: " + Math.rint(calories));
+
+                }
+                if (user.gender.equals("female")) {
+                    user.macroInfo();
+                    System.out.println("Recommended Daily Calories: " + Math.rint(femaleCalories));
+                }
+
 
             }
 
