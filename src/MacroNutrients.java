@@ -113,10 +113,16 @@ public class MacroNutrients  {
                     calories *= 1.725;
                 }
                 if (user.gender.equals("female")) {
-                    calories *= 0.9;
+                    calories *= 0.8;
+                }
+                if (user.fitnessGoal.equals("lose")) {
+                    calories *= 0.8;
+                }
+                if (user.fitnessGoal.equals("gain")) {
+                    calories *= 1.2;
                 }
                 user.macroInfo();
-                System.out.println("Recommended Daily Calories: " + calories);
+                System.out.println("Recommended Daily Calories: " + Math.rint(calories));
 
             }
 
