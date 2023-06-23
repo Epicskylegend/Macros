@@ -8,10 +8,7 @@ public class UserInfo {
     int exerciseDays = 0;
 
 
-    int protein = 0;
-    int carbs = 0;
-    int fat = 0;
-    int sugar = 0;
+
 
     public void macroInfo () {
         System.out.println("User Information");

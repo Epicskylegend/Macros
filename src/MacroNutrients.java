@@ -13,7 +13,12 @@ public class MacroNutrients  {
 
         while (tracker <= 7) {
             double calories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age) + 5;
-            double femaleCalories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age) - 161;
+            double femaleCalories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age) - 116;
+
+            int protein = 0;
+            int carbs = 0;
+            int fat = 0;
+            int sugar = 0;
 
             if (tracker == 1) {
                 user.ageInfo();
@@ -124,14 +129,19 @@ public class MacroNutrients  {
                     calories *= 1.2;
                     femaleCalories *= 1.2;
                 }
+                if (user.diet.equals("balanced")) {
+                    protein += (calories * 0.25)/4;
+                }
                 if (user.gender.equals("male")) {
                     user.macroInfo();
                     System.out.println("Recommended Daily Calories: " + Math.rint(calories));
+                    System.out.println("Recommended Protein Intake: " + protein);
 
                 }
                 if (user.gender.equals("female")) {
                     user.macroInfo();
                     System.out.println("Recommended Daily Calories: " + Math.rint(femaleCalories));
+                    System.out.println("Recommended Protein Intake: " + protein);
                 }
 
 
