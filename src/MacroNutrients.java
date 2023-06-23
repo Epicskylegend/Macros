@@ -137,17 +137,17 @@ public class MacroNutrients  {
                 if (user.gender.equals("male")) {
                     user.macroInfo();
                     System.out.println("Recommended Daily Calories: " + Math.rint(calories));
-                    System.out.println("Recommended Daily Protein Intake: " + protein);
-                    System.out.println("Recommended Daily Carb Intake: " + carbs);
-                    System.out.println("Recommended Daily Fat Intake: " + fat);
+                    System.out.println("Recommended Daily Protein Intake: " + protein + "g");
+                    System.out.println("Recommended Daily Carb Intake: " + carbs + "g");
+                    System.out.println("Recommended Daily Fat Intake: " + fat + "g");
 
                 }
                 if (user.gender.equals("female")) {
                     user.macroInfo();
                     System.out.println("Recommended Daily Calories: " + Math.rint(femaleCalories));
-                    System.out.println("Recommended Protein Intake: " + protein);
-                    System.out.println("Recommended Daily Carb Intake: " + carbs);
-                    System.out.println("Recommended Daily Fat Intake: " + fat);
+                    System.out.println("Recommended Protein Intake: " + protein + "g");
+                    System.out.println("Recommended Daily Carb Intake: " + carbs + "g");
+                    System.out.println("Recommended Daily Fat Intake: " + fat + "g");
                 }
 
 
