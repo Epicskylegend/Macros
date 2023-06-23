@@ -25,3 +25,8 @@ Male Calories: 9.99 * weight in kg + 6.25 * height in cm - 4.92 * age + 5
 Female Calories: 9.99 * weight in kg + 6.25 x height in cm - 4.92 * age - 161
 
 Multiply Above information by actively level state above to find calories to maintain current weight.
+
+Men burn more calories passively than women generally due to higher amount of muscle and lower amounts of fat.
+Muscle is more metabolically active than fat and therefore burns more calories in an equivalent amount of time.
+Men burn around 5-10% more calories than women passively. This number increases when working out.
+Several sources show that the difference is about 30% when working out.

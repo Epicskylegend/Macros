@@ -13,7 +13,7 @@ public class MacroNutrients  {
 
         while (tracker <= 7) {
             double calories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age) + 5;
-            double femaleCalories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age)- 161;
+            double femaleCalories = (user.weight * 0.454) * (9.99) + (6.25 * user.height) - (4.92 * user.age) - 161;
 
             if (tracker == 1) {
                 user.ageInfo();
@@ -102,19 +102,19 @@ public class MacroNutrients  {
             if (tracker == 8) {
                 if (user.exerciseDays == 0) {
                     calories *= 1.2;
-                    femaleCalories *= 1.2;
+                    femaleCalories *= 1.1;
                 }
                 if (user.exerciseDays > 0 && user.exerciseDays < 3) {
                     calories *= 1.375;
-                    femaleCalories *= 1.375;
+                    femaleCalories *= 1.2;
                 }
                 if (user.exerciseDays >= 3 && user.exerciseDays < 6) {
                     calories *= 1.55;
-                    femaleCalories *= 1.55;
+                    femaleCalories *= 1.35;
                 }
                 if (user.exerciseDays >= 6) {
                     calories *= 1.725;
-                    femaleCalories *= 1.725;
+                    femaleCalories *= 1.5;
                 }
                 if (user.fitnessGoal.equals("lose")) {
                     calories *= 0.8;
