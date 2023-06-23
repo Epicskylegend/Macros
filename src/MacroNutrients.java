@@ -140,7 +140,6 @@ public class MacroNutrients  {
                     System.out.println("Recommended Daily Protein Intake: " + protein + "g");
                     System.out.println("Recommended Daily Carb Intake: " + carbs + "g");
                     System.out.println("Recommended Daily Fat Intake: " + fat + "g");
-
                 }
                 if (user.gender.equals("female")) {
                     user.macroInfo();
