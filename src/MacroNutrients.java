@@ -131,17 +131,23 @@ public class MacroNutrients  {
                 }
                 if (user.diet.equals("balanced")) {
                     protein += (calories * 0.25)/4;
+                    carbs += (calories * 0.50)/4;
+                    fat += (calories * 0.25)/9;
                 }
                 if (user.gender.equals("male")) {
                     user.macroInfo();
                     System.out.println("Recommended Daily Calories: " + Math.rint(calories));
-                    System.out.println("Recommended Protein Intake: " + protein);
+                    System.out.println("Recommended Daily Protein Intake: " + protein);
+                    System.out.println("Recommended Daily Carb Intake: " + carbs);
+                    System.out.println("Recommended Daily Fat Intake: " + fat);
 
                 }
                 if (user.gender.equals("female")) {
                     user.macroInfo();
                     System.out.println("Recommended Daily Calories: " + Math.rint(femaleCalories));
                     System.out.println("Recommended Protein Intake: " + protein);
+                    System.out.println("Recommended Daily Carb Intake: " + carbs);
+                    System.out.println("Recommended Daily Fat Intake: " + fat);
                 }
 
 
