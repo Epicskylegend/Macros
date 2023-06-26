@@ -142,6 +142,7 @@ public class MacroNutrients  {
                     System.out.println("Recommended Daily Fat Intake: " + fat + "g");
                 }
                 if (user.gender.equals("female")) {
+                    protein *= 0.78;
                     user.macroInfo();
                     System.out.println("Recommended Daily Calories: " + Math.rint(femaleCalories));
                     System.out.println("Recommended Protein Intake: " + protein + "g");
