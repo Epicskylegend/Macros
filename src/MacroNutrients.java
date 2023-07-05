@@ -134,6 +134,21 @@ public class MacroNutrients  {
                     carbs += (calories * 0.50)/4;
                     fat += (calories * 0.25)/9;
                 }
+                if (user.diet.equals("high protein")) {
+                    protein += (calories * 0.35)/4;
+                    carbs += (calories * 0.40)/4;
+                    fat += (calories * 0.25)/9;
+                }
+                if (user.diet.equals("low fat")) {
+                    protein += (calories * 0.30)/4;
+                    carbs += (calories * 0.50)/4;
+                    fat += (calories * 0.20)/9;
+                }
+                if (user.diet.equals("low carb")) {
+                    protein += (calories * 0.30) / 4;
+                    carbs += (calories * 0.40) / 4;
+                    fat += (calories * 0.30) / 9;
+                }
                 if (user.gender.equals("male")) {
                     user.macroInfo();
                     System.out.println("Recommended Daily Calories: " + Math.rint(calories));
